@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>CV Musik</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f172a;
+      color: #38bdf8;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body onclick="playMusic()">
+  <h1>Selamat Datang di CV Elesss Ghifari<br>(Klik di mana saja untuk masuk)</h1>
+
+  <audio id="bg-music" src="orangbiasa.mp3" loop></audio>
+
+  <script>
+    function playMusic() {
+      const bgMusic = document.getElementById("bg-music");
+      bgMusic.volume = 0.2;
+      bgMusic.play().then(() => {
+        console.log("Musik jalan 🎶");
+      }).catch(err => {
+        console.log("Gagal:", err);
+      });
+
+      // setelah musik nyala, ubah tampilan ke halaman utama
+      document.body.innerHTML = `
+        <div style="padding:40px; color:white; text-align:center">
+          <h2>Ini halaman utama CV 🎉</h2>
+          <p>Musik sudah jalan otomatis di background</p>
+        </div>
+      `;
+      document.body.onclick = null;
+    }
+  </script>
+</body>
+</html>

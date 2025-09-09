@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElesKechee</title>
+
+  <link rel="icon" href="waguri.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="waguri.png">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Devicon untuk logo bahasa/tools -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Overlay blur saat popup -->
+  <div id="overlay-blur" class="active"></div>
+
+  <!-- Overlay petir -->
+  <div id="lightning-overlay" aria-hidden="true"></div>
+
+  <!-- Popup Welcome (biru neon) -->
+  <div id="welcome-popup" class="popup active">
+    <div class="welcome-box">
+      <h1>Selamat Datang ⚡</h1>
+      <p>Klik tombol di bawah untuk masuk ke CV</p>
+      <button id="enter-btn" class="btn-primary">Masuk</button>
+    </div>
+  </div>
+
+  <!-- Tombol theme toggle (kotak) -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+
+  <!-- Musik (diputar setelah klik popup) -->
+  <audio id="bg-music" loop>
+    <source src="orangbiasa.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Konten -->
+  <header class="profile-section">
+    <img src="pp.png" alt="Profile Picture" class="pp" />
+    <h1 class="name">Elesss Ghifarii</h1>
+  </header>
+
+  <main class="container">
+    <!-- Info cards -->
+    <section class="info-cards">
+      <div class="info-card clickable">
+        <i class="devicon-github-original"></i>
+        <span><strong>Bio: Teruslah Melangkah Walau Sering Gagal</strong></span>
+      </div>
+      <div class="info-card clickable">
+        <i class="devicon-codepen-plain"></i>
+        <span><strong>Hobi: Ngoding kalau gak ada kerjaan & Nonton</strong></span>
+      </div>
+      <div class="info-card clickable">
+        <span class="emoji">🎓</span>
+        <span><strong>Sekolah: Smk Muhammadiyah 7 Gondanglegi</strong></span>
+      </div>
+      <div class="info-card clickable">
+        <span class="emoji">📍</span>
+        <span><strong>Lokasi: Malang, GondangLegi</strong></span>
+      </div>
+      <div class="info-card clickable">
+        <i class="devicon-google-plain"></i>
+        <span><strong>Kontak: domethode@gmail.com</strong></span>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-section">
+      <h2>Skill Coding</h2>
+
+      <h3>Frontend</h3>
+      <div class="skills-grid two-col">
+        <div class="skill-card clickable">
+          <i class="devicon-html5-plain colored"></i>
+          <span>HTML5</span>
+          <div class="bar"><div class="fill" data-percent="95"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-css3-plain colored"></i>
+          <span>CSS3</span>
+          <div class="bar"><div class="fill" data-percent="92"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+          <div class="bar"><div class="fill" data-percent="90"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-react-original colored"></i>
+          <span>React</span>
+          <div class="bar"><div class="fill" data-percent="88"></div></div>
+        </div>
+      </div>
+
+      <h3>Backend</h3>
+      <div class="skills-grid two-col">
+        <div class="skill-card clickable">
+          <i class="devicon-nodejs-plain colored"></i>
+          <span>Node.js</span>
+          <div class="bar"><div class="fill" data-percent="90"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-python-plain colored"></i>
+          <span>Python</span>
+          <div class="bar"><div class="fill" data-percent="87"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-php-plain colored"></i>
+          <span>PHP</span>
+          <div class="bar"><div class="fill" data-percent="86"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-mysql-plain colored"></i>
+          <span>MySQL</span>
+          <div class="bar"><div class="fill" data-percent="89"></div></div>
+        </div>
+      </div>
+
+      <h3>UI / UX</h3>
+      <div class="skills-grid two-col">
+        <div class="skill-card clickable">
+          <i class="devicon-figma-plain colored"></i>
+          <span>Figma</span>
+          <div class="bar"><div class="fill" data-percent="91"></div></div>
+        </div>
+        <div class="skill-card clickable">
+          <i class="devicon-canva-original colored"></i>
+          <span>Canva</span>
+          <div class="bar"><div class="fill" data-percent="88"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
