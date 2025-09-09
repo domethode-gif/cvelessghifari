@@ -5,7 +5,23 @@ const enterBtn = document.getElementById("enter-btn");
 const themeToggle = document.getElementById("theme-toggle");
 const music = document.getElementById("bg-music");
 const lightning = document.getElementById("lightning-overlay");
+const ppImages = ["pp.png", "waguri.png"];
+let ppIndex = 0;
+const ppEl = document.querySelector(".pp");
 
+if (ppEl) {
+  setInterval(() => {
+    ppEl.classList.add("fade-out");
+    setTimeout(() => {
+      ppIndex = (ppIndex + 1) % ppImages.length;
+      ppEl.src = ppImages[ppIndex];
+      ppEl.classList.remove("fade-out");
+      ppEl.classList.add("fade-in");
+
+      setTimeout(() => ppEl.classList.remove("fade-in"), 1000);
+    }, 1000);
+  }, 5000);
+}
 // -----------------------------
 // Popup -> play musik + hilangkan blur
 // -----------------------------
